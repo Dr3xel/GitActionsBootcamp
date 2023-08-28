@@ -3,6 +3,7 @@ on: workflow_dispatch
 jobs:
   hello:
     runs-on: ubuntu-latest
+    environment: test
     steps:
       - name: Echo message
-        run: echo "Hello, Dmitrijs"
+        run: echo "Hello, ${{ vars.MY_NAME }}"
